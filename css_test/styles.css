@@ -1,0 +1,158 @@
+@font-face {
+  font-family: intro-bold;
+  src: url(fonts/IntroBold.otf);
+}
+
+@font-face {
+  font-family: museo-sans;
+  src: url(fonts/MuseoSans.otf);
+}
+
+body, div, h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: museo-sans;
+}
+
+div.nav {
+  height: 5em;
+  width: 100%;
+  background-color: #F1F1F1;
+  padding: 1em;
+  border-bottom: solid 2px #DAAE4A;
+  font-size: 2em;
+}
+
+div.nav > a:not(.logo) {
+  float: right;
+  padding: 1em;
+  text-decoration: none;
+  color: #DAAE4A;
+}
+
+div > a.logo {
+  display: inline-block;
+  clear: left;
+  height: 100%;
+}
+
+div > a.logo > img.small {
+  height: 100%;
+}
+
+div > a.logo > img.full {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  div > a.logo > img.full {
+    display: inline-block;
+    height: 100%;
+  }
+  div > a.logo > img.small {
+    display: none;
+  }
+
+  div.nav {
+    height: 70px;
+    width: 100%;
+    background-color: #F1F1F1;
+    padding: 5px;
+    border-bottom: solid 2px #DAAE4A;
+    font-size: 20px;
+  }
+  div.nav > a:not(.logo) {
+    padding: 20px;
+  }
+}
+
+/* heading */
+div.heading {
+  background-image: url("./img/splash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30% 5% 50% 5%;
+  text-align: center;
+  background-position: 100% 50%;
+  font-family: intro-bold;
+  position: relative;
+}
+
+div.heading > h1 {
+  color: grey;
+  font-size: 5em;
+  font-style: bold;
+}
+
+div.heading > h2 {
+  color: grey;
+  text-transform: lowercase;
+  font-size: 3em;
+}
+
+@media only screen and (min-width: 1000px) {
+  div.heading {
+    padding: 15% 5% 30% 5%;
+  }
+}
+
+/* features */
+div.features {
+  color: #717171;
+  width: 100%;
+}
+div.features > .feature {
+  width: 100%;
+  background-color: #FCFCFC;
+  border-bottom: solid 5px #717171;
+  padding-top: 100%;
+  position: relative;
+}
+div.features > .feature:last-child {
+  border: none;
+}
+div.features > .feature > h3 {
+  text-align: center;
+  font-family: intro-bold;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 5em;
+  background-image: url(img/chakra.png);
+  background-size: 20%;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+}
+
+div.features > .feature > p {
+  text-align: justify;
+  position: absolute;
+  top: 60%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 3em;
+  padding: 0 5%;
+}
+
+@media only screen and (min-width: 1000px) {
+  div.features > .feature {
+    width: 33.3vw;
+    padding-top: 33.3%;
+    float: left;
+    border-right: solid 5px #717171;
+    border-bottom: none;
+  }
+
+  div.features > .feature > h3 {
+    font-size: 40px;
+  }
+
+  div.features > .feature > p {
+    font-size: 18px;
+
+  }
+}
